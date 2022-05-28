@@ -1,0 +1,18 @@
+name: "SIS -2022"
+output_dir: "docs"
+navbar:
+  title: "SIS 2022 Caserta conference program"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Wed, 22 June"
+      href: 22j.html
+    - text: "Thu, 23 June"
+      href: 23j.html
+    - text: "Fri, 24 June"
+      href: 24j.html
+    - text: "Searcher"
+      href: search.html
+output:
+  html_document:
+    theme: cosmo
