@@ -1,5 +1,5 @@
 ---
-title: "SIS 2022 CP"
+title: "&nbsp;"
 ---
 
 ```{r setup, include=FALSE}
@@ -7,3 +7,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## HERE I AM
+
+- go to [Wednesday](22j.html)
+- go to [Thurday](23j.html)
+- go to [Friday](24j.html)
