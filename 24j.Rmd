@@ -1,0 +1,9 @@
+---
+title: "Friday 24 June"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## HERE 24 June prog
