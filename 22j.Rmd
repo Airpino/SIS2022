@@ -6,4 +6,95 @@ title: "Wednesday 22 June"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## HERE 22 June prog
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(readr)
+library(DT)
+library(tidyverse)
+TODATE<-"22/06/2022"
+id <- "118r1bHNAH2-YECIsqXeRiW6tH369l0pN"
+sessions<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
+colnames(sessions)[[1]]="DATE"
+id <- "116b9Jys61L6T76nCoFYOS1Y_uMQxhpTU"
+papers<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
+colnames(papers)[[1]]="IDSESS"
+
+joint<-sessions %>% left_join(papers,by=c("IDSESS"="IDSESS"))
+joint22M<-joint %>% filter((DATE==TODATE)&(MorAft=="Morning")) %>% 
+  mutate(binfo=paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT)) %>% 
+  select(binfo,LAVORI)
+colnames(joint22M)[[2]]<-"Click the session name to collapse or expand"
+joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>% 
+  mutate(binfo=paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT)) %>% 
+  select(binfo,LAVORI)
+colnames(joint22A)[[2]]<-"Click the session name to collapse or expand"
+```
+
+```{css, echo = FALSE}
+  .nav-pills>li>a:hover, .nav-pills>li>a:focus, .nav-pills>li.active>a,     .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+     background-color: plum;
+     }
+}
+```
+
+# Daily Program {.tabset .tabset-fade .tabset-pills}
+
+## Morning
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+callback_js <- JS(
+        "table.on('click', 'tr.dtrg-group', function () {",
+        "  var rowsCollapse = $(this).nextUntil('.dtrg-group');",
+        "  $(rowsCollapse).toggleClass('hidden');",
+        "});",
+        "table.one('init', () => $('.dtrg-group').trigger('click'))"
+      )
+callback_js2 <- JS(
+        "table.on('click', 'tr.dtrg-group', function () {",
+        "  var rowsCollapse = $(this).nextUntil('.dtrg-group');",
+        "  $(rowsCollapse).toggleClass('hidden');",
+        "});",
+        "table.one('init', () => $('#my_table2 .dtrg-group').trigger('click'))"
+      )
+# datatable(
+#       joint22M,
+#       rownames = FALSE,
+#       #columnDefs = list(list(visible=FALSE, targets=0)),
+#       extensions = 'RowGroup',
+#       options = list(rowGroup = list(dataSrc = 0), pageLength = 100),
+#       callback = callback_js,
+#       selection = 'none'
+#     )
+datatable(
+       joint22M,
+       rownames = FALSE,
+       extensions = 'RowGroup', 
+       options = list(rowGroup = list(dataSrc=c(0)),
+                         columnDefs = list(list(visible=FALSE, targets=c(0))),
+                       pageLength = 100,dom = 'ft'
+                         ),
+       callback = callback_js,
+       selection='none',
+       escape=FALSE)
+
+
+```
+
+## Afternoon
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+datatable(
+       joint22A,
+       rownames = FALSE,
+       extensions = 'RowGroup', 
+       options = list(rowGroup = list(dataSrc=c(0)),
+                         columnDefs = list(list(visible=FALSE, targets=c(0))),
+                       pageLength = 100,dom = 'ft'
+                         ),
+       callback = callback_js,
+       selection='none',
+       escape=FALSE)
+```
+
+# {-}
+
+<a href="#top">Back to top</a>

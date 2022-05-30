@@ -1,9 +1,36 @@
 ---
-title: "Searcher"
+title: "&nbsp;"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+```{css include=FALSE}
+d-title {
+    display: none;
+  }
+```
+
 
 ## Searcher
+
+```{r searcher, echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+library(DT)
+library(tidyverse)
+
+id <- "118r1bHNAH2-YECIsqXeRiW6tH369l0pN"
+sessions<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
+colnames(sessions)[[1]]="DATE"
+id <- "116b9Jys61L6T76nCoFYOS1Y_uMQxhpTU"
+papers<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
+colnames(papers)[[1]]="IDSESS"
+
+joint<-sessions %>% left_join(papers,by=c("IDSESS"="IDSESS"))
+
+
+DT::datatable(joint %>% select(DATE,ORARIOLUNGO,IDSESS,LAVORI,Room,CHAIR,DISCUSSANT),rownames = FALSE)
+```
+# {-}
+
+<a href="#top">Back to top</a>
