@@ -1,7 +1,7 @@
 name: "SIS -2022"
 output_dir: "docs"
 navbar:
-  title: "SIS 2022 Caserta conference program"
+  title: "SIS 2022 CP"
   left:
     - text: "Home"
       href: index.html
