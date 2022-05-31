@@ -1,18 +1,21 @@
 ---
-title: "&nbsp;"
+title: "Search"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-```{css include=FALSE}
+```{css echo=FALSE}
 d-title {
     display: none;
   }
+.dataTables_wrapper .dataTables_filter{
+    float: left;
+}
+.dataTables_wrapper .dataTables_length{
+    float: right;
+}
 ```
-
-
-## Searcher
 
 ```{r searcher, echo=FALSE, message=FALSE, warning=FALSE}
 library(readr)
@@ -27,9 +30,33 @@ papers<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=downloa
 colnames(papers)[[1]]="IDSESS"
 
 joint<-sessions %>% left_join(papers,by=c("IDSESS"="IDSESS"))
+DF<-joint %>% select(DATE,ORARIOLUNGO,IDSESS,LAVORI,Room,CHAIR,DISCUSSANT,Link.to.paper) %>% 
+  mutate("When and where"=case_when(
+    grepl("CON",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: "),
+    grepl("SPE",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room, " </br> Chair:&nbsp;", CHAIR, "</br>Disc.: ", DISCUSSANT),
+    grepl("SOL",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room, "</br> Chair:&nbsp;", CHAIR),
+    grepl("COFFEE",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: "),
+    TRUE ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ")
+      ),
+    Contribution=LAVORI,"Click to download"=Link.to.paper) %>% select("When and where",Contribution,"Click to download")
 
+# cb<-JS(
+# "$(document).ready(function (){",
+#     "var table = $('#example').DataTable({",
+#      "  'initComplete': function(){",
+#     "      $('#example_filter').detach().appendTo('#newSearch');",
+#      "  },",
+#    "    'language': { 'search':'' } ",
+#   "  });",
+# "});"
+# )
 
-DT::datatable(joint %>% select(DATE,ORARIOLUNGO,IDSESS,LAVORI,Room,CHAIR,DISCUSSANT),rownames = FALSE)
+DT::datatable(DF,rownames = FALSE,escape=FALSE,
+             # callback = cb,
+              options = list(
+                       pageLength = 20
+                         )
+              )
 ```
 # {-}
 
