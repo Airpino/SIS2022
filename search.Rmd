@@ -25,12 +25,22 @@ library(tidyverse)
 id <- "118r1bHNAH2-YECIsqXeRiW6tH369l0pN"
 sessions<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
 colnames(sessions)[[1]]="DATE"
-id <- "116b9Jys61L6T76nCoFYOS1Y_uMQxhpTU"
+id <- "12Uc6uypR3AqKcWb_PS1pnDCmukrplbSI"
 papers<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
 colnames(papers)[[1]]="IDSESS"
+id<-"12SQi3N-ArwXD-wKGMT7jAWEBaIvn8l-a"
+links<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
+papers<-papers %>% left_join(links,by = c("FOLDER"="IDpap_fol")) %>%
+  mutate(Contribute=paste0("<b>",Title,"</b></br><i>",Authors,"</i>"), Link=Links)%>% 
+  select(IDSESS,Contribute,Link)
 
+
+```
+
+
+```{r searcher2, echo=FALSE, message=FALSE, warning=FALSE}
 joint<-sessions %>% left_join(papers,by=c("IDSESS"="IDSESS"))
-DF<-joint %>% select(DATE,ORARIOLUNGO,IDSESS,LAVORI,Room,CHAIR,DISCUSSANT,Link.to.paper) %>% 
+DF<-joint %>% select(DATE,ORARIOLUNGO,IDSESS,Contribute,Room,CHAIR,DISCUSSANT,Link) %>% 
   mutate("When and where"=case_when(
     grepl("CON",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: "),
     grepl("SPE",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room, " </br> Chair:&nbsp;", CHAIR, "</br>Disc.: ", DISCUSSANT),
@@ -38,7 +48,9 @@ DF<-joint %>% select(DATE,ORARIOLUNGO,IDSESS,LAVORI,Room,CHAIR,DISCUSSANT,Link.t
     grepl("COFFEE",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: "),
     TRUE ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ")
       ),
-    Contribution=LAVORI,"Click to download"=Link.to.paper) %>% select("When and where",Contribution,"Click to download")
+    Contribution=Contribute,
+    "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
+  select("When and where",Contribution,"Click to download")
 
 # cb<-JS(
 # "$(document).ready(function (){",
