@@ -14,18 +14,41 @@ TODATE<-"22/06/2022"
 id <- "118r1bHNAH2-YECIsqXeRiW6tH369l0pN"
 sessions<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
 colnames(sessions)[[1]]="DATE"
-id <- "116b9Jys61L6T76nCoFYOS1Y_uMQxhpTU"
+id <- "12Uc6uypR3AqKcWb_PS1pnDCmukrplbSI"
 papers<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
 colnames(papers)[[1]]="IDSESS"
-
+id<-"12SQi3N-ArwXD-wKGMT7jAWEBaIvn8l-a"
+links<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
+papers<-papers %>% left_join(links,by = c("FOLDER"="IDpap_fol")) %>%
+  mutate(Contribute=paste0("<b>",Title,"</b></br><i>",Authors,"</i>"), Link=Links)%>% 
+  select(IDSESS,Contribute,Link)
 joint<-sessions %>% left_join(papers,by=c("IDSESS"="IDSESS"))
+```
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
 joint22M<-joint %>% filter((DATE==TODATE)&(MorAft=="Morning")) %>% 
-  mutate(binfo=paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT)) %>% 
-  select(binfo,LAVORI)
+  mutate(binfo=case_when(
+    grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description),
+    grepl("SPE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT),
+    grepl("SOL",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
+    grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
+    TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
+      ),
+         "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
+  select(binfo,Contribute,"Click to download")
 colnames(joint22M)[[2]]<-"Click the session name to collapse or expand"
+
 joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>% 
-  mutate(binfo=paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT)) %>% 
-  select(binfo,LAVORI)
+  mutate(binfo=case_when(
+    grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description),
+    grepl("SPE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT),
+    grepl("SOL",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
+    grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
+    TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
+      ),
+         "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
+  select(binfo,Contribute,"Click to download")
 colnames(joint22A)[[2]]<-"Click the session name to collapse or expand"
 ```
 
