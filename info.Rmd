@@ -1,0 +1,37 @@
+---
+title: "Info and Contacts"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# {.tabset}
+
+## Signal an issue
+
+For any issue regarding the Conference, please contact the Welcome desk or write an email to 
+<a href = "mailto:sis2022caserta@gmail.com?subject=Conference issue&body=Dear SIS2022 Organization,%0D%0A I am (name, surname)  %0D%0A I need support for the following issue: %0D%0A">
+Send Email
+</a>
+
+## Where to eat
+
+- [A selection from Tripadvisor](https://www.tripadvisor.it/Restaurants-g194713-Caserta_Province_of_Caserta_Campania.html)
+- [Where to eat a good pizza](https://eataliantraveler.com/where-to-eat-the-best-pizza-in-caserta/)
+
+## What to see around
+
+Dear participant, 
+
+do you have some spare time? These links will help you to organizing your stay in Caserta:
+
+- [Suggestions from Tripadvisor](https://www.tripadvisor.it/Attractions-g194713-Activities-Caserta_Province_of_Caserta_Campania.html)
+- [Official Website of the ROyal Palace of Caserta (Reggia)](https://reggiadicaserta.cultura.gov.it/)
+
+How to move in or around Caserta
+
+- [Urban public transport](https://aircampania.it/linee-e-orari/linee-caserta/)
+- [Extraurban public transport](https://www.atcbus.it/p/autolinee_reg_nuovi_orari.htm)
+- [Taxi service](http://www.serviziotaxicaserta.it/)
+- [Scooter and sustainable mobility](https://updates.moovit.com/94349-2/)
