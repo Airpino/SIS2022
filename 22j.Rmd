@@ -12,7 +12,8 @@ library(DT)
 library(tidyverse)
 TODATE<-"22/06/2022"
 id <- "118r1bHNAH2-YECIsqXeRiW6tH369l0pN"
-sessions<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
+Li_to_sess<-paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download")
+sessions<-read.csv(Li_to_sess,sep=";")
 colnames(sessions)[[1]]="DATE"
 id <- "12Uc6uypR3AqKcWb_PS1pnDCmukrplbSI"
 papers<-read.csv(paste0("https://docs.google.com/u/0/uc?id=",id,"&export=download"),sep=";")
