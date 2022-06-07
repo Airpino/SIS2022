@@ -29,9 +29,10 @@ joint<-sessions %>% left_join(papers,by=c("IDSESS"="IDSESS"))
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 joint22M<-joint %>% filter((DATE==TODATE)&(MorAft=="Morning")) %>% 
   mutate(binfo=case_when(
-    grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description),
+    #grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description),
     grepl("SPE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT),
     grepl("SOL",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
+    grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
     grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
     TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
       ),
@@ -41,9 +42,10 @@ colnames(joint22M)[[2]]<-"Click the session name to collapse or expand"
 
 joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>% 
   mutate(binfo=case_when(
-    grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description),
+    #grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description),
     grepl("SPE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT),
     grepl("SOL",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
+    grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
     grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
     TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
       ),
