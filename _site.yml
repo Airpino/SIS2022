@@ -13,6 +13,8 @@ navbar:
       href: 24j.html
     - text: "Searcher"
       href: search.html
+    - text: "Map of SIS2022"
+      href: map.html
     - text: "Info and contacts"
       href: info.html
 output:
