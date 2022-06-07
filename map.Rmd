@@ -1,0 +1,15 @@
+---
+title: "Map of SIS2022 places"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- [](https://www.google.com/maps/d/edit?mid=1JuE9NpJ070JuYx1Y-TSZhj929YmiSjM&usp=sharing) -->
+
+<!-- https://www.google.com/maps/d/edit?mid=1JuE9NpJ070JuYx1Y-TSZhj929YmiSjM&usp=sharing -->
+
+<iframe src="https://www.google.com/maps/d/embed?mid=1JuE9NpJ070JuYx1Y-TSZhj929YmiSjM&hl=it&ehbc=2E312F" width="640" height="480"></iframe>
+
+[Download the map in PDF](https://drive.google.com/file/d/12bwki3Qr47tkOGzB5WWo7FBxl7O6-kbh/view?usp=sharing)

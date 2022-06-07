@@ -14,5 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 <h3>Go to [Wednesday, 22 June](22j.html) </h3>
 <h3>Go to [Thurday, 23 June](23j.html) </h3>
 <h3>Go to [Friday, 24 June](24j.html) </h3>
-<h3> [Search for papers or authors](search.html) </h3>
+<h3> [Search for talks or authors](search.html) </h3>
+<h4> [Map of the conference](map.html) </h4>
 <h4> [Info and contacts](info.html) </h4>
