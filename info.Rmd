@@ -12,8 +12,36 @@ knitr::opts_chunk$set(echo = TRUE)
 
 For any issue regarding the Conference, please contact the Welcome desk or write an email to 
 <a href = "mailto:sis2022caserta@gmail.com?subject=Conference issue&body=Dear SIS2022 Organization,%0D%0A I am (name, surname)  %0D%0A I need support for the following issue: %0D%0A">
-Send Email
+Local Organizing Committee
 </a>
+
+### LOCAL ORGANIZING COMMITTEE
+
+- __Rosanna Verde  (Chair)__– _Università della Campania_
+- Antonio Balzanella – _Università della Campania “Luigi Vanvitelli”_
+- Ida Camminatiello – _Università della Campania “Luigi Vanvitelli”_
+- Lelio Campanile – _Università della Campania “Luigi Vanvitelli”_
+- Stefania Capecchi – _Università di Napoli “Federico II”_
+- Antonio De Falco – _Università di Napoli “Federico II”_
+- Domenico De Stefano - _Università di Trieste_
+- Andrea Diana – _Università della Campania “Luigi Vanvitelli”_
+- Michele Gallo – _Università di Napoli “L’Orientale”_
+- Giuseppe Giordano – _Università di Salerno_
+- Ferdinando Grillo – _Università della Campania “Luigi Vanvitelli”_
+- Mauro Iacono – _Università della Campania “Luigi Vanvitelli”_
+- Antonio Irpino – _Università della Campania “Luigi Vanvitelli”_
+- Rosaria Lombardo – _Università della Campania “Luigi Vanvitelli”_
+- Michele Mastroianni – _Università della Campania “Luigi Vanvitelli”_
+- Fabrizio Maturo – _Università della Campania “Luigi Vanvitelli”_
+- Fiammetta Marulli – _Università della Campania “Luigi Vanvitelli”_
+- Paolo Mazzocchi – _Università di Napoli “Parthenope”_
+- Marco Menale – _Università della Campania “Luigi Vanvitelli”_
+- Stefania Nacchia – _Università della Campania “Luigi Vanvitelli”_
+- Giuseppe Pandolfi - _Università di Napoli “Federico II”_
+- Antonella Rocca – _Università di Napoli “Parthenope”_
+- Elvira Romano – _Università della Campania “Luigi Vanvitelli”_
+- Biagio Simonetti – _Università del Sannio_
+
 
 ## Where to eat
 
@@ -35,3 +63,29 @@ How to move in or around Caserta
 - [Extraurban public transport](https://www.atcbus.it/p/autolinee_reg_nuovi_orari.htm)
 - [Taxi service](http://www.serviziotaxicaserta.it/)
 - [Scooter and sustainable mobility](https://updates.moovit.com/94349-2/)
+
+## Program committee
+
+- __Matilde Bini (Chair)__ - _Università Europea di Roma_
+- Giovanna Boccuzzo - _Università degli studi di Padova_
+- Antonio Canale - _Università degli studi di Padova_
+- Maurizio Carpita - _Università degli studi di Brescia_
+- Carlo Cavicchia - _Erasmus University Rotterdam_
+- Claudio Conversano - _Università degli studi della Cagliari_
+- Fabio Crescenzi - _ISTAT_
+- Domenico De Stefano - _Università di Trieste_
+- Lara Fontanella - _Università degli studi di Chieti-Pescara_
+- Ornella Giambalvo - _Università degli studi di Palermo_
+- Gabriella Grassia - _Università degli Studi di Napoli Federico II_
+- Tiziana Laureti - _Università della Tuscia_
+- Caterina Liberati - _Università degli studi di Milano-Bicocca_
+- Lucio Masserini - _Università degli studi di Pisa_
+- Cira Perna - _Università degli studi Salerno_
+- Pier Francesco Perri - _Università degli studi della Calabria_
+- Elena Pirani - _Università degli studi di Firenze_
+- Gennaro Punzo - _Università degli studi di Napoli Parthenope_
+- Emanuele Raffinetti - _Università degli studi di Pavia_
+- Matteo Ruggiero - _Università degli studi di Torino_
+- Salvatore Strozza - _Università degli studi di Napoli Federico II_
+- Rosanna Verde - _Università della Campania Luigi Vanvitelli, Caserta_
+- Donatella Vicari - _Università degli studi La Sapienza, Roma_
