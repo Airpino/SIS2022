@@ -8,10 +8,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # {.tabset}
 
+## News
+
+
+```{r, echo=FALSE}
+id_info<-"https://docs.google.com/u/0/uc?id=13QMciIIPwQC3GBQZ0asJfnPtJVkcPIGA&export=download"
+htmltools::includeHTML(id_info)
+```
+
 ## Signal an issue
 
-For any issue regarding the Conference, please contact the Welcome desk or write an email to 
-<a href = "mailto:sis2022caserta@gmail.com?subject=Conference issue&body=Dear SIS2022 Organization,%0D%0A I am (name, surname)  %0D%0A I need support for the following issue: %0D%0A">
+For any issue regarding the Conference, please contact the Welcome desk or write an email to the
+<a href = "mailto:sis2022@Unicampania.it?subject=Conference issue&body=Dear SIS2022 Organization,%0D%0A I am (name, surname)  %0D%0A I need support for the following issue: %0D%0A">
 Local Organizing Committee
 </a>
 

@@ -1,5 +1,5 @@
 ---
-title: "Search"
+title: "Search for talks or authors"
 ---
 
 ```{r setup, include=FALSE}
@@ -63,10 +63,11 @@ DF<-joint %>% select(DATE,ORARIOLUNGO,IDSESS,Contribute,Room,CHAIR,DISCUSSANT,Li
 # "});"
 # )
 
-DT::datatable(DF,rownames = FALSE,escape=FALSE,
+DT::datatable(DF,rownames = FALSE,escape=FALSE,#filter = 'top',
              # callback = cb,
               options = list(
-                       pageLength = 20
+                       pageLength = 20#,
+#                       columnDefs = list(list(searchable = FALSE, targets = 2))
                          )
               )
 ```

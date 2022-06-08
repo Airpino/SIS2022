@@ -38,7 +38,7 @@ joint22M<-joint %>% filter((DATE==TODATE)&(MorAft=="Morning")) %>%
       ),
          "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
   select(binfo,Contribute,"Click to download")
-colnames(joint22M)[[2]]<-"Click the session name to collapse or expand"
+colnames(joint22M)[[2]]<-"Click on the session name to collapse or expand"
 
 joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>% 
   mutate(binfo=case_when(
@@ -50,7 +50,7 @@ joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>%
       ),
          "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
   select(binfo,Contribute,"Click to download")
-colnames(joint22A)[[2]]<-"Click the session name to collapse or expand"
+colnames(joint22A)[[2]]<-"Click on the session name to collapse or expand"
 ```
 
 ```{css, echo = FALSE}
@@ -62,7 +62,7 @@ colnames(joint22A)[[2]]<-"Click the session name to collapse or expand"
 
 # Daily Program {.tabset .tabset-fade .tabset-pills}
 
-## Morning
+## <b>Morning</b>
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 callback_js <- JS(
@@ -103,7 +103,7 @@ datatable(
 
 ```
 
-## Afternoon
+## <b>Afternoon</b>
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 datatable(
