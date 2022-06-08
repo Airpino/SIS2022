@@ -11,11 +11,11 @@ navbar:
       href: 23j.html
     - text: "Fri, 24 June"
       href: 24j.html
-    - text: "Searcher"
+    - text: "Search"
       href: search.html
     - text: "Map of SIS2022"
       href: map.html
-    - text: "Info and contacts"
+    - text: "News, Info and contacts"
       href: info.html
 output:
   html_document:

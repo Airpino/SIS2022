@@ -1,21 +1,22 @@
 ---
-title: "![](https://docs.google.com/uc?export=download&id=10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_){width=100% height=100%}"
-subtitle: "<b>Conference Program </b>"
+title: "![](https://docs.google.com/uc?export=download&id=10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_){width=90% height=90%}"
 ---
-
+ 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+<h2><b>Conference Program</b></h2><h5>[Download a printable PDF](https://drive.google.com/file/d/13_WkhGg6Oj-i2zbLcuVNUA8U-Cz8yGWd/view?usp=sharing)</h5>
 
 <!-- id1<-"10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_" -->
 <!-- id2<-"10ulozhk5ySLTvtL_gd6RjH8SeM9U5qu8" -->
 <!-- ![](https://docs.google.com/uc?export=download&id=10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_){width=50% height=50%} -->
 
-<h3>Go to [Wednesday, 22 June](22j.html) </h3>
-<h3>Go to [Thursday, 23 June](23j.html) </h3>
-<h3>Go to [Friday, 24 June](24j.html) </h3>
+- <h3>Go to [Wednesday, 22 June](22j.html) </h3>
+- <h3>Go to [Thursday, 23 June](23j.html) </h3>
+- <h3>Go to [Friday, 24 June](24j.html) </h3>
 
-- <h3> [Search for talks or authors](search.html) </h3>
+   - <h3> [Search for talks or authors](search.html) </h3>
 
-- <h4> [Map of the conference](map.html) </h4>
-- <h4> [Info and contacts](info.html) </h4>
+   - <h4> [Map of the conference](map.html) </h4>
+   - <h4> [News, Info and contacts](info.html) </h4>
