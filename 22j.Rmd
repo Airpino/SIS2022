@@ -36,8 +36,10 @@ joint22M<-joint %>% filter((DATE==TODATE)&(MorAft=="Morning")) %>%
     grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
     TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
       ),
-         "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
-  select(binfo,Contribute,"Click to download")
+         "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail."),
+    links=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),""),
+    Contribute=paste0(Contribute," ",links)) %>% 
+  select(binfo,Contribute)
 colnames(joint22M)[[2]]<-"Click on the session name to collapse or expand"
 
 joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>% 
@@ -48,8 +50,10 @@ joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>%
     grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
     TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
       ),
-         "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
-  select(binfo,Contribute,"Click to download")
+            "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail."),
+    links=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),""),
+    Contribute=paste0(Contribute," ",links)) %>% 
+  select(binfo,Contribute)
 colnames(joint22A)[[2]]<-"Click on the session name to collapse or expand"
 ```
 
