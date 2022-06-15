@@ -49,8 +49,10 @@ DF<-joint %>% select(DATE,ORARIOLUNGO,IDSESS,Contribute,Room,CHAIR,DISCUSSANT,Li
     TRUE ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room)
       ),
     Contribution=Contribute,
-    "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail.")) %>% 
-  select("When and where",Contribution,"Click to download")
+    "Click to download"=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),"not avail."),
+      links=if_else(!is.na(Link),paste0("<a href=\"",Link,"\">View</a>"),""),
+    Contribution=paste0(Contribution, " ",links)) %>% 
+  select("When and where",Contribution)
 
 # cb<-JS(
 # "$(document).ready(function (){",
