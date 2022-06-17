@@ -1,12 +1,16 @@
 ---
-title: "![](https://docs.google.com/uc?export=download&id=10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_){width=90% height=90%}"
+title: "SIS 2022 Conference Program"
 ---
  
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+![](https://docs.google.com/uc?export=download&id=10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_){width=90% height=90%}
+<!-- <h2><b>Conference Program</b>&nbsp; -->
 
-<h2><b>Conference Program</b>&nbsp;<font size="1">updated on June, 17th</font></h2><h5>[Download a printable PDF](https://drive.google.com/file/d/13_WkhGg6Oj-i2zbLcuVNUA8U-Cz8yGWd/view?usp=sharing)</h5>
+<font size="2">updated on June, 17th</font>
+<!-- </h2> -->
+<h5>[Download a printable PDF](https://drive.google.com/file/d/13_WkhGg6Oj-i2zbLcuVNUA8U-Cz8yGWd/view?usp=sharing)</h5>
 
 <!-- id1<-"10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_" -->
 <!-- id2<-"10ulozhk5ySLTvtL_gd6RjH8SeM9U5qu8" -->
