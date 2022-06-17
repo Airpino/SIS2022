@@ -6,7 +6,7 @@ title: "![](https://docs.google.com/uc?export=download&id=10lIXB21f4RL2I_xAwnGAq
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<h2><b>Conference Program</b></h2><h5>[Download a printable PDF](https://drive.google.com/file/d/13_WkhGg6Oj-i2zbLcuVNUA8U-Cz8yGWd/view?usp=sharing)</h5>
+<h2><b>Conference Program</b></h2><h5>[Download a printable PDF](https://drive.google.com/file/d/13_WkhGg6Oj-i2zbLcuVNUA8U-Cz8yGWd/view?usp=sharing)</h5> (updated 17th June 2022)
 
 <!-- id1<-"10lIXB21f4RL2I_xAwnGAqPaehNFmnV1_" -->
 <!-- id2<-"10ulozhk5ySLTvtL_gd6RjH8SeM9U5qu8" -->

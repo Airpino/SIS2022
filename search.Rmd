@@ -45,6 +45,7 @@ DF<-joint %>% select(DATE,ORARIOLUNGO,IDSESS,Contribute,Room,CHAIR,DISCUSSANT,Li
     grepl("SPE",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room, " </br> Chair:&nbsp;", CHAIR, "</br>Disc.: ", DISCUSSANT),
     grepl("SOL",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room, "</br> Chair:&nbsp;", CHAIR),
     grepl("CON",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room, "</br> Chair:&nbsp;", CHAIR),
+    grepl("GUE",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room, "</br> Chair:&nbsp;", CHAIR),
     grepl("COFFEE",IDSESS) ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room),
     TRUE ~ paste0(DATE,"&nbsp;&#x2011;&nbsp;", ORARIOLUNGO," </br> ", IDSESS, " Room: ", Room)
       ),
