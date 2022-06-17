@@ -33,6 +33,7 @@ joint22M<-joint %>% filter((DATE==TODATE)&(MorAft=="Morning")) %>%
     grepl("SPE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT),
     grepl("SOL",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
     grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
+    grepl("GUE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
     grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
     TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
       ),
@@ -47,6 +48,7 @@ joint22A<-joint %>% filter((DATE==TODATE)&(MorAft=="Afternoon")) %>%
     grepl("SPE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR, " Disc.: ", DISCUSSANT),
     grepl("SOL",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
     grepl("CON",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
+    grepl("GUE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " - <br/> ", description," Chair: ", CHAIR),
     grepl("COFFEE",IDSESS) ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description),
     TRUE ~ paste0(ORARIOLUNGO, " - Room: ", Room, " -  ", description)
       ),
