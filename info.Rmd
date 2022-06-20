@@ -12,9 +12,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r, echo=FALSE}
-id_info<-"https://docs.google.com/u/0/uc?id=13QMciIIPwQC3GBQZ0asJfnPtJVkcPIGA&export=download"
-htmltools::includeHTML(id_info)
+#id_info<-"https://docs.google.com/u/0/uc?id=13QMciIIPwQC3GBQZ0asJfnPtJVkcPIGA&export=download"
+#htmltools::includeHTML(id_info)
 ```
+### WIFI availability
+In the rooms of the conference you are recommended to use your EDUROAM credentials for accessing to the Wifi network.
+
+If you have not an EDUROAM profile, exceptionally, you can connect to the __V:guest__ network using the password __#NakhTim!__
 
 ## Signal an issue
 
